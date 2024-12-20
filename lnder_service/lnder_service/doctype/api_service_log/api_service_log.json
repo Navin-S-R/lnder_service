@@ -1,0 +1,94 @@
+{
+ "actions": [],
+ "autoname": "autoincrement",
+ "creation": "2024-12-20 16:24:15.630266",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "tenant",
+  "api_method",
+  "url",
+  "column_break_dwfp",
+  "header",
+  "payload",
+  "section_break_lekg",
+  "status_code",
+  "response"
+ ],
+ "fields": [
+  {
+   "fieldname": "api_method",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "API Method"
+  },
+  {
+   "fieldname": "url",
+   "fieldtype": "Small Text",
+   "label": "URL"
+  },
+  {
+   "fieldname": "column_break_dwfp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "header",
+   "fieldtype": "Code",
+   "label": "Header"
+  },
+  {
+   "fieldname": "payload",
+   "fieldtype": "Code",
+   "label": "Payload"
+  },
+  {
+   "fieldname": "section_break_lekg",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "status_code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status Code"
+  },
+  {
+   "fieldname": "response",
+   "fieldtype": "Code",
+   "label": "Response",
+   "read_only": 1
+  },
+  {
+   "fieldname": "tenant",
+   "fieldtype": "Link",
+   "label": "Tenant",
+   "options": "Tenant"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-12-20 16:28:24.896262",
+ "modified_by": "Administrator",
+ "module": "Lnder Service",
+ "name": "API Service Log",
+ "naming_rule": "Autoincrement",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,117 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:tenant",
+ "creation": "2024-12-20 12:38:59.641600",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "tenant_details_section",
+  "tenant",
+  "column_break_zvmc",
+  "is_active",
+  "section_break_zwma",
+  "available_credits",
+  "column_break_rlgr",
+  "valid_from",
+  "column_break_wtpr",
+  "valid_till",
+  "section_break_rqjn",
+  "get_api",
+  "tenant_api"
+ ],
+ "fields": [
+  {
+   "fieldname": "tenant",
+   "fieldtype": "Link",
+   "label": "Tenant",
+   "options": "User",
+   "unique": 1
+  },
+  {
+   "fieldname": "column_break_zvmc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_active",
+   "fieldtype": "Check",
+   "label": "Is Active"
+  },
+  {
+   "fieldname": "section_break_zwma",
+   "fieldtype": "Section Break",
+   "label": "Credit Details"
+  },
+  {
+   "fieldname": "available_credits",
+   "fieldtype": "Float",
+   "label": "Available Credits"
+  },
+  {
+   "fieldname": "column_break_rlgr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "valid_from",
+   "fieldtype": "Date",
+   "label": "Valid From"
+  },
+  {
+   "fieldname": "column_break_wtpr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "valid_till",
+   "fieldtype": "Date",
+   "label": "Valid Till"
+  },
+  {
+   "fieldname": "section_break_rqjn",
+   "fieldtype": "Section Break",
+   "label": "API Details"
+  },
+  {
+   "fieldname": "tenant_api",
+   "fieldtype": "Table",
+   "label": "Tenant API",
+   "options": "Tenant API"
+  },
+  {
+   "fieldname": "tenant_details_section",
+   "fieldtype": "Section Break",
+   "label": "Tenant Details"
+  },
+  {
+   "fieldname": "get_api",
+   "fieldtype": "Button",
+   "label": "Get API",
+   "options": "get_api"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-12-20 17:42:22.423002",
+ "modified_by": "Administrator",
+ "module": "Lnder Service",
+ "name": "Tenant",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,73 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-12-20 13:34:30.209739",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_m6va",
+  "url",
+  "column_break_fgg8",
+  "authorization",
+  "section_break_vvhc",
+  "api_endpoint_detail"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_m6va",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "https://api.signzy.app/api/v3",
+   "fieldname": "url",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "URl",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_fgg8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "authorization",
+   "fieldtype": "Password",
+   "in_list_view": 1,
+   "label": "Authorization",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_vvhc",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "api_endpoint_detail",
+   "fieldtype": "Table",
+   "label": "API Endpoint Detail",
+   "options": "API Endpoint Detail"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2024-12-20 17:45:37.048334",
+ "modified_by": "Administrator",
+ "module": "Lnder Service",
+ "name": "Signzy Connector",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

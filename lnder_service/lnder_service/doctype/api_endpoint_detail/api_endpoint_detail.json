@@ -1,0 +1,53 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-12-20 13:38:13.513980",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "api_method",
+  "url_endpoint",
+  "cost_per_call",
+  "is_active"
+ ],
+ "fields": [
+  {
+   "fieldname": "api_method",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "API Method"
+  },
+  {
+   "fieldname": "url_endpoint",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "URL Endpoint"
+  },
+  {
+   "fieldname": "cost_per_call",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Cost Per Call"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_active",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "is Active"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-12-20 14:08:45.901450",
+ "modified_by": "Administrator",
+ "module": "Lnder Service",
+ "name": "API Endpoint Detail",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
