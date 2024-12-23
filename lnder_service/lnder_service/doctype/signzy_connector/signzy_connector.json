@@ -22,7 +22,7 @@
    "fieldname": "url",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "URl",
+   "label": "URL",
    "reqd": 1
   },
   {
@@ -50,7 +50,7 @@
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2024-12-20 17:45:37.048334",
+ "modified": "2024-12-23 11:01:30.461642",
  "modified_by": "Administrator",
  "module": "Lnder Service",
  "name": "Signzy Connector",

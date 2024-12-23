@@ -99,6 +99,7 @@ app_license = "mit"
 # before_app_install = "lnder_service.utils.before_app_install"
 # after_app_install = "lnder_service.utils.after_app_install"
 
+after_migrate = "lnder_service.after_migrate.after_migrate"
 # Integration Cleanup
 # -------------------
 # To clean up dependencies/integrations with other apps
@@ -132,7 +133,9 @@ app_license = "mit"
 # override_doctype_class = {
 # 	"ToDo": "custom_app.overrides.CustomToDo"
 # }
-
+override_doctype_class = {
+    "User": "lnder_service.customization.user.override.CustomUser"
+}
 # Document Events
 # ---------------
 # Hook on document methods and events
