@@ -24,8 +24,10 @@
   {
    "fieldname": "tenant",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Tenant",
    "options": "User",
+   "reqd": 1,
    "unique": 1
   },
   {
@@ -45,7 +47,7 @@
   },
   {
    "fieldname": "available_credits",
-   "fieldtype": "Float",
+   "fieldtype": "Int",
    "label": "Available Credits"
   },
   {
@@ -55,7 +57,9 @@
   {
    "fieldname": "valid_from",
    "fieldtype": "Date",
-   "label": "Valid From"
+   "in_list_view": 1,
+   "label": "Valid From",
+   "reqd": 1
   },
   {
    "fieldname": "column_break_wtpr",
@@ -64,7 +68,9 @@
   {
    "fieldname": "valid_till",
    "fieldtype": "Date",
-   "label": "Valid Till"
+   "in_list_view": 1,
+   "label": "Valid Till",
+   "reqd": 1
   },
   {
    "fieldname": "section_break_rqjn",
@@ -91,7 +97,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-12-20 17:42:22.423002",
+ "modified": "2024-12-21 14:29:08.981392",
  "modified_by": "Administrator",
  "module": "Lnder Service",
  "name": "Tenant",

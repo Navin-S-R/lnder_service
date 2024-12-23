@@ -16,7 +16,7 @@ class Tenant(Document):
 			if api_service := frappe.get_all("API Endpoint Detail",{
 				"parent" : service,
 				"api_method" : ["not in",existing_api_list]
-				},["api_method","cost_per_call"]):
+				},["parent as service_name","api_method","cost_per_call"]):
 				api_list.extend(api_service)
 
 		if api_list:

@@ -16,17 +16,19 @@
    "fieldname": "api_method",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "API Method"
+   "label": "API Method",
+   "reqd": 1
   },
   {
    "fieldname": "url_endpoint",
    "fieldtype": "Small Text",
    "in_list_view": 1,
-   "label": "URL Endpoint"
+   "label": "URL Endpoint",
+   "reqd": 1
   },
   {
    "fieldname": "cost_per_call",
-   "fieldtype": "Float",
+   "fieldtype": "Int",
    "in_list_view": 1,
    "label": "Cost Per Call"
   },
@@ -41,7 +43,7 @@
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2024-12-20 14:08:45.901450",
+ "modified": "2024-12-23 11:48:13.418587",
  "modified_by": "Administrator",
  "module": "Lnder Service",
  "name": "API Endpoint Detail",
