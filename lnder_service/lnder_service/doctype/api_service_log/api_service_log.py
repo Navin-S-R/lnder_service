@@ -1,12 +1,17 @@
 # Copyright (c) 2024, hello@aerele.in and contributors
 # For license information, please see license.txt
 
-import frappe, json
+import json
+from datetime import datetime, timedelta
+
+import frappe
 from frappe.model.document import Document
+from frappe.utils import get_site_path
 
 
 class APIServiceLog(Document):
     pass
+
 
 def create_log(
     service,
@@ -51,3 +56,38 @@ def create_log(
 
     log_doc.status_code = api_response_status_code
     log_doc.insert(ignore_permissions=True)
+
+
+# Make Archive file
+def archive_logs():
+    current_date = datetime.today()
+
+    # Calculate the start and end of the previous month
+    first_day_of_current_month = current_date.replace(day=1)
+    last_day_of_previous_month = first_day_of_current_month - timedelta(days=1)
+    first_day_of_previous_month = last_day_of_previous_month.replace(day=1)
+
+    # Convert dates to strings for SQL query
+    start_date = first_day_of_previous_month.strftime("%Y-%m-%d")
+    end_date = last_day_of_previous_month.strftime("%Y-%m-%d")
+
+    logs = frappe.db.sql(
+        """
+        SELECT * FROM `tabAPI Service Log`
+        WHERE creation >= %s AND creation <= %s
+    """,
+        (start_date, end_date),
+        as_dict=True,
+    )
+
+    # convert dates to str
+    for log in logs:
+        for key, value in log.items():
+            if isinstance(value, datetime):
+                log[key] = value.strftime("%Y-%m-%d %H:%M:%S")
+
+    saving_location = (
+        f"{get_site_path()}/public/files/logs_{start_date}-to-{end_date}.json"
+    )
+    with open(saving_location, "w") as log_file:
+        json.dump(logs, log_file)
